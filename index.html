@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>闪酷音乐网</title>
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    <!-- Bootstrap 5以上版本不需要jQuery即可工作 -->
+    <!-- bootstrap.js 没有集成Popper .js 而 bootstrap.bundle.js集成了Popper .js -->
+    <script src="./bootstrap.bundle.js"></script>
+    <style>
+        #pills-tabContent .tab-pane {
+            border: 1px solid blue;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        #pills-tabContent .ccc {
+            border-radius: 10px;
+            margin: 0 5px 0 5px;
+            padding: 10px;
+        }
+
+        #pills-tabContent .ddd {
+            margin: 5px 0 5px 0;
+        }
+
+        @media screen and (max-width: 560px) {
+            .navbar .img-fluid {
+                width: 250px;
+            }
+        }
+
+        @media screen and (min-width: 750px) {
+            .navbar .img-fluid {
+                width: 200px;
+            }
+        }
+
+        .container-fluid {
+            padding: 0 !important;
+        }
+
+        .container-fluid .carousel-indicators button {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+        }
+
+        .card img {
+            height: 250px;
+        }
+
+        .text-truncate-3 {
+            text-overflow: -o-ellipsis-lastline;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            line-clamp: 3;
+            -webkit-box-orient: vertical;
+        }
+    </style>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
+    <!-- nav -->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="javascript:void(0)"><img class="img-fluid" src="./img/logo.png" alt=""></a>
+            <button class="navbar-toggler jjj" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section1">首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section2">TOP500</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section3">新歌推荐</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0)">抖音歌曲</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"
+                            href="javascript:void(0)">经典老歌</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">经典情歌</a></li>
+                            <li><a class="dropdown-item" href="#">影视歌曲</a></li>
+                            <li><a class="dropdown-item" href="#">情歌对唱</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0)">网络歌曲</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0)">随便听听</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="text" placeholder=" 请输入搜索内容">
+                    <button class="btn btn-success w-50" type="button">站内搜索</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- head -->
+    <div class="container-fluid" id="section1">
+        <!-- 轮播 -->
+        <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+            <!-- 指示符 -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="4"></button>
+            </div>
+
+            <!-- 轮播图片 -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img decoding="async" src="./img5-2/banner-1.jpg" class="d-block" style="width:100%">
+                </div>
+                <div class="carousel-item">
+                    <img decoding="async" src="./img5-2/banner-2.jpg" class="d-block" style="width:100%">
+                </div>
+                <div class="carousel-item">
+                    <img decoding="async" src="./img5-2/banner-3.jpg" class="d-block" style="width:100%">
+                </div>
+                <div class="carousel-item">
+                    <img decoding="async" src="./img5-2/banner-4.jpg" class="d-block" style="width:100%">
+                </div>
+                <div class="carousel-item">
+                    <img decoding="async" src="./img5-2/banner-5.jpg" class="d-block" style="width:100%">
+                </div>
+            </div>
+
+            <!-- 左右切换按钮 -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </div>
+
+    <div class="container" id="section2">
+        <h1 class="text-center text-success">Top500</h1>
+        <p class="text-center text-warning">热门榜单，看我九酷音乐网！</p>
+        <div class="row">
+            <div class="col">
+                <h3 class="text-nowrap">2020最火的歌曲Top10</h3>
+                <table class="table table-bordered table-hover table-striped">
+                    <thead class="text-white bg-black">
+                        <tr>
+                            <th>排名</th>
+                            <th>歌曲名</th>
+                            <th>歌手名</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-striped">
+                        <tr>
+                            <td>1</td>
+                            <td>《往后余生》</td>
+                            <td>马良</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>《出山》</td>
+                            <td>花粥/王胜男</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>《多年以后》</td>
+                            <td>大欢</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>《再也》</td>
+                            <td>李智</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>《生僻字》</td>
+                            <td>陈柯宇</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>《沙漠骆驼》</td>
+                            <td>夏雨菲</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>《盗将行》</td>
+                            <td>马雨阳</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>《年少有为》</td>
+                            <td>李荣浩</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>《我的名字》</td>
+                            <td>焦迈奇</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>《差不多姑娘》</td>
+                            <td>G.E.M邓紫棋</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col">
+                <h3 class="text-nowrap">2020好歌推荐Top10</h3><!--  -->
+                <table class="table table-bordered table-hover table-striped">
+                    <thead>
+                        <tr>
+                            <th>排名</th>
+                            <th>歌曲名</th>
+                            <th>歌手名</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>《往后余生》</td>
+                            <td>马良</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>《出山》</td>
+                            <td>花粥/王胜男</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>《多年以后》</td>
+                            <td>大欢</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>《再也》</td>
+                            <td>李智</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>《生僻字》</td>
+                            <td>陈柯宇</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>《沙漠骆驼》</td>
+                            <td>夏雨菲</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>《盗将行》</td>
+                            <td>马雨阳</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>《年少有为》</td>
+                            <td>李荣浩</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>《我的名字》</td>
+                            <td>焦迈奇</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>《差不多姑娘》</td>
+                            <td>G.E.M邓紫棋</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="section3">
+        <h1 class="text-center text-success">新歌推荐</h1>
+        <p class="text-center text-warning">更多新歌，尽在九酷音乐网！</p>
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
+                    type="button" role="tab" aria-controls="pills-home" aria-selected="true">华语</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
+                    type="button" role="tab" aria-controls="pills-profile" aria-selected="false">欧美</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact"
+                    type="button" role="tab" aria-controls="pills-contact" aria-selected="false">韩国</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-disabled-tab" data-bs-toggle="pill" data-bs-target="#pills-disabled"
+                    type="button" role="tab" aria-controls="pills-disabled" aria-selected="false">日本</button>
+            </li>
+        </ul>
+        <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"
+                tabindex="0">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 col-xl-3 ddd">
+                        <div class="row bg-primary ccc">
+                            <div class="col">
+                                <a href="#"><img src="./素材5-1/img5-1/xin-1.jpg" alt="" width="110"></a>
+                            </div>
+                            <div class="col">
+                                <h5 class="text-danger">西洲曲</h5>
+                                等什么君
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-xl-3 ddd">
+                        <div class="row bg-primary ccc">
+                            <div class="col">
+                                <a href="#"><img src="./素材5-1/img5-1/xin-2.jpg" alt="" width="110"></a>
+                            </div>
+                            <div class="col">
+                                <h5 class="text-danger">传家</h5>
+                                周深
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-xl-3 ddd">
+                        <div class="row bg-primary ccc">
+                            <div class="col">
+                                <a href="#"><img src="./素材5-1/img5-1/xin-3.jpg" alt="" width="110"></a>
+                            </div>
+                            <div class="col">
+                                <h5 class="text-danger">可知否</h5>
+                                唐伯虎Annie
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-xl-3 ddd">
+                        <div class="row bg-primary ccc">
+                            <div class="col">
+                                <a href="#"><img src="./素材5-1/img5-1/xin-4.jpg" alt="" width="110"></a>
+                            </div>
+                            <div class="col">
+                                <h5 class="text-danger">I See Us</h5>
+                                周深
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row" style="margin-top: 20px;">
+                    <div class="col-sm-12 col-md-6 col-xl-3 ddd">
+                        <div class="row bg-primary ccc">
+                            <div class="col">
+                                <a href="#"><img src="./素材5-1/img5-1/xin-5.jpg" alt="" width="110"></a>
+                            </div>
+                            <div class="col">
+                                <h5 class="text-danger">心愿</h5>
+                                任然
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-xl-3 ddd">
+                        <div class="row bg-primary ccc">
+                            <div class="col">
+                                <a href="#"><img src="./素材5-1/img5-1/xin-6.jpg" alt="" width="110"></a>
+                            </div>
+                            <div class="col">
+                                <h5 class="text-danger">人间道</h5>
+                                大壮
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-xl-3 ddd">
+                        <div class="row bg-primary ccc">
+                            <div class="col">
+                                <a href="#"><img src="./素材5-1/img5-1/xin-7.jpg" alt="" width="110"></a>
+                            </div>
+                            <div class="col">
+                                <h5 class="text-danger">不能放弃</h5>
+                                大欢
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-xl-3 ddd">
+                        <div class="row bg-primary ccc">
+                            <div class="col">
+                                <a href="#"><img src="./素材5-1/img5-1/xin-8.jpg" alt="" width="110"></a>
+                            </div>
+                            <div class="col">
+                                <h5 class="text-danger">对错时间</h5>
+                                半吨兄弟
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"
+                tabindex="0">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 col-xl-3 ddd">
+                        <div class="row bg-success ccc">
+                            <div class="col">
+                                <a href="#"><img src="./素材5-1/img5-1/xin-1.jpg" alt="" width="110"></a>
+                            </div>
+                            <div class="col">
+                                <h5 class="text-danger">西洲曲</h5>
+                                等什么君
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-xl-3 ddd">
+                        <div class="row bg-success ccc">
+                            <div class="col">
+                                <a href="#"><img src="./素材5-1/img5-1/xin-2.jpg" alt="" width="110"></a>
+                            </div>
+                            <div class="col">
+                                <h5 class="text-danger">传家</h5>
+                                周深
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-xl-3 ddd">
+                        <div class="row bg-success ccc">
+                            <div class="col">
+                                <a href="#"><img src="./素材5-1/img5-1/xin-3.jpg" alt="" width="110"></a>
+                            </div>
+                            <div class="col">
+                                <h5 class="text-danger">可知否</h5>
+                                唐伯虎Annie
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-xl-3 ddd">
+                        <div class="row bg-success ccc">
+                            <div class="col">
+                                <a href="#"><img src="./素材5-1/img5-1/xin-4.jpg" alt="" width="110"></a>
+                            </div>
+                            <div class="col">
+                                <h5 class="text-danger">I See Us</h5>
+                                周深
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row" style="margin-top: 20px;">
+                    <div class="col-sm-12 col-md-6 col-xl-3 ddd">
+                        <div class="row bg-success ccc">
+                            <div class="col">
+                                <a href="#"><img src="./素材5-1/img5-1/xin-5.jpg" alt="" width="110"></a>
+                            </div>
+                            <div class="col">
+                                <h5 class="text-danger">心愿</h5>
+                                任然
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-xl-3 ddd">
+                        <div class="row bg-success ccc">
+                            <div class="col">
+                                <a href="#"><img src="./素材5-1/img5-1/xin-6.jpg" alt="" width="110"></a>
+                            </div>
+                            <div class="col">
+                                <h5 class="text-danger">人间道</h5>
+                                大壮
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-xl-3 ddd">
+                        <div class="row bg-success ccc">
+                            <div class="col">
+                                <a href="#"><img src="./素材5-1/img5-1/xin-7.jpg" alt="" width="110"></a>
+                            </div>
+                            <div class="col">
+                                <h5 class="text-danger">不能放弃</h5>
+                                大欢
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-xl-3 ddd">
+                        <div class="row bg-success ccc">
+                            <div class="col">
+                                <a href="#"><img src="./素材5-1/img5-1/xin-8.jpg" alt="" width="110"></a>
+                            </div>
+                            <div class="col">
+                                <h5 class="text-danger">对错时间</h5>
+                                半吨兄弟
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 col-xl-3 ddd">
+                        <div class="row bg-warning ccc">
+                            <div class="col">
+                                <a href="#"><img src="./素材5-1/img5-1/xin-1.jpg" alt="" width="110"></a>
+                            </div>
+                            <div class="col">
+                                <h5 class="text-danger">西洲曲</h5>
+                                等什么君
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-xl-3 ddd">
+                        <div class="row bg-warning ccc">
+                            <div class="col">
+                                <a href="#"><img src="./素材5-1/img5-1/xin-2.jpg" alt="" width="110"></a>
+                            </div>
+                            <div class="col">
+                                <h5 class="text-danger">传家</h5>
+                                周深
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-xl-3 ddd">
+                        <div class="row bg-warning ccc">
+                            <div class="col">
+                                <a href="#"><img src="./素材5-1/img5-1/xin-3.jpg" alt="" width="110"></a>
+                            </div>
+                            <div class="col">
+                                <h5 class="text-danger">可知否</h5>
+                                唐伯虎Annie
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-xl-3 ddd">
+                        <div class="row bg-warning ccc">
+                            <div class="col">
+                                <a href="#"><img src="./素材5-1/img5-1/xin-4.jpg" alt="" width="110"></a>
+                            </div>
+                            <div class="col">
+                                <h5 class="text-danger">I See Us</h5>
+                                周深
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row" style="margin-top: 20px;">
+                    <div class="col-sm-12 col-md-6 col-xl-3 ddd">
+                        <div class="row bg-warning ccc">
+                            <div class="col">
+                                <a href="#"><img src="./素材5-1/img5-1/xin-5.jpg" alt="" width="110"></a>
+                            </div>
+                            <div class="col">
+                                <h5 class="text-danger">心愿</h5>
+                                任然
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-xl-3 ddd">
+                        <div class="row bg-warning ccc">
+                            <div class="col">
+                                <a href="#"><img src="./素材5-1/img5-1/xin-6.jpg" alt="" width="110"></a>
+                            </div>
+                            <div class="col">
+                                <h5 class="text-danger">人间道</h5>
+                                大壮
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-xl-3 ddd">
+                        <div class="row bg-warning ccc">
+                            <div class="col">
+                                <a href="#"><img src="./素材5-1/img5-1/xin-7.jpg" alt="" width="110"></a>
+                            </div>
+                            <div class="col">
+                                <h5 class="text-danger">不能放弃</h5>
+                                大欢
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-xl-3 ddd">
+                        <div class="row bg-warning ccc">
+                            <div class="col">
+                                <a href="#"><img src="./素材5-1/img5-1/xin-8.jpg" alt="" width="110"></a>
+                            </div>
+                            <div class="col">
+                                <h5 class="text-danger">对错时间</h5>
+                                半吨兄弟
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="pills-disabled" role="tabpanel" aria-labelledby="pills-disabled-tab"
+                tabindex="0">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 col-xl-3 ddd">
+                        <div class="row bg-light ccc">
+                            <div class="col">
+                                <a href="#"><img src="./素材5-1/img5-1/xin-1.jpg" alt="" width="110"></a>
+                            </div>
+                            <div class="col">
+                                <h5 class="text-danger">西洲曲</h5>
+                                等什么君
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-xl-3 ddd">
+                        <div class="row bg-light ccc">
+                            <div class="col">
+                                <a href="#"><img src="./素材5-1/img5-1/xin-2.jpg" alt="" width="110"></a>
+                            </div>
+                            <div class="col">
+                                <h5 class="text-danger">传家</h5>
+                                周深
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-xl-3 ddd">
+                        <div class="row bg-light ccc">
+                            <div class="col">
+                                <a href="#"><img src="./素材5-1/img5-1/xin-3.jpg" alt="" width="110"></a>
+                            </div>
+                            <div class="col">
+                                <h5 class="text-danger">可知否</h5>
+                                唐伯虎Annie
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-xl-3 ddd">
+                        <div class="row bg-light ccc">
+                            <div class="col">
+                                <a href="#"><img src="./素材5-1/img5-1/xin-4.jpg" alt="" width="110"></a>
+                            </div>
+                            <div class="col">
+                                <h5 class="text-danger">I See Us</h5>
+                                周深
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row" style="margin-top: 20px;">
+                    <div class="col-sm-12 col-md-6 col-xl-3 ddd">
+                        <div class="row bg-light ccc">
+                            <div class="col">
+                                <a href="#"><img src="./素材5-1/img5-1/xin-5.jpg" alt="" width="110"></a>
+                            </div>
+                            <div class="col">
+                                <h5 class="text-danger">心愿</h5>
+                                任然
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-xl-3 ddd">
+                        <div class="row bg-light ccc">
+                            <div class="col">
+                                <a href="#"><img src="./素材5-1/img5-1/xin-6.jpg" alt="" width="110"></a>
+                            </div>
+                            <div class="col">
+                                <h5 class="text-danger">人间道</h5>
+                                大壮
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-xl-3 ddd">
+                        <div class="row bg-light ccc">
+                            <div class="col">
+                                <a href="#"><img src="./素材5-1/img5-1/xin-7.jpg" alt="" width="110"></a>
+                            </div>
+                            <div class="col">
+                                <h5 class="text-danger">不能放弃</h5>
+                                大欢
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-xl-3 ddd">
+                        <div class="row bg-light ccc">
+                            <div class="col">
+                                <a href="#"><img src="./素材5-1/img5-1/xin-8.jpg" alt="" width="110"></a>
+                            </div>
+                            <div class="col">
+                                <h5 class="text-danger">对错时间</h5>
+                                半吨兄弟
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 class="text-center text-success">歌手排行</h1>
+        <p class="text-center text-warning">热歌榜前十名的歌手！</p>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card">
+                    <img src="./img5-2/singer1.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title" data-bs-toggle="tooltip" data-bs-placement="right"
+                            title="歌手 音乐人 演员 导演 编剧" style="display: inline-block;">周杰伦</h5>
+                        <p class="card-text text-truncate-3" title="周杰伦" data-bs-toggle="popover"
+                            data-bs-trigger="hover"
+                            data-bs-content="曾几何时，周杰伦也在某视频平台开过一次线上直播。当时的数据是什么呢？开播前半个小时，周同学的快手直播间已经聚集了100万粉丝。当周杰伦出现在直播间时，观看的粉丝增长了到了500万。至晚上9点整结束，周杰伦的粉丝数也一跃3000万+。他一直是顶流，并且从未被取代过">
+                            曾几何时，周杰伦也在某视频平台开过一次线上直播。当时的数据是什么呢？开播前半个小时，周同学的快手直播间已经聚集了100万粉丝。当周杰伦出现在直播间时，观看的粉丝增长了到了500万。至晚上9点整结束，周杰伦的粉丝数也一跃3000万+。他一直是顶流，并且从未被取代过
+                        </p>
+                        <p style="margin-bottom: 0;text-align: right;">
+                            <a class="nav-link text-muted" href="#" data-bs-toggle="modal"
+                                data-bs-target="#myModal">更多>>></a>
+                        </p>
+                        <div class="modal" id="myModal">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+
+                                    <!-- 模态框头部 -->
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">周杰伦 播报 编辑 讨论99+ 上传视频</h4>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                    </div>
+
+                                    <!-- 模态框内容 -->
+                                    <div class="modal-body">
+                                        1979年1月18日台湾省新北市中国
+                                        周杰伦（Jay Chou），1979年1月18日出生于台湾省新北市，祖籍福建省泉州市永春县，中国台湾流行乐男歌手、音乐人、演员、导演、编剧，毕业于淡江中学。
+                                        2000年发行首张个人专辑《Jay》。2001年发行的专辑《范特西》奠定其融合中西方音乐的风格。2002年举行“The One”世界巡回演唱会
+                                        。2003年成为美国《时代周刊》封面人物 。2004年获得世界音乐大奖中国区最畅销艺人奖
+                                        。2005年凭借动作片《头文字D》获得金马奖、金像奖最佳新人奖。2006年起连续三年获得世界音乐大奖中国区最畅销艺人奖
+                                        。2007年自编自导的文艺片《不能说的秘密》获得金马奖年度台湾杰出电影奖。
+                                        2008年凭借歌曲《青花瓷》获得第19届金曲奖最佳作曲人奖。2009年入选美国CNN评出的“25位亚洲最具影响力人物”，同年凭借专辑《魔杰座》获得第20届金曲奖最佳国语男歌手奖。2010年入选美国《Fast
+                                        Company》评出的“全球百大创意人物”。2011年凭借专辑《跨时代》再度获得金曲奖最佳国语男歌手奖，并且第四次获得金曲奖最佳国语专辑奖；同年主演好莱坞电影《青蜂侠》
+                                        。2012年登福布斯中国名人榜榜首 。2014年发行华语乐坛首张数字音乐专辑《哎呦，不错哦》 。2021年在央视春晚演唱歌曲《Mojito》 。
+                                        演艺事业外，他还涉足商业、设计等领域。2007年成立杰威尔有限公司。2011年担任华硕笔电设计师，并入股香港文化传信集团 。
+                                        周杰伦热心公益慈善，多次向中国内地灾区捐款捐物。2008年捐款援建希望小学 。2014年担任中国禁毒宣传形象大使。
+                                    </div>
+
+                                    <!-- 模态框底部 -->
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">关闭</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="./img5-2/singer2.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title" data-bs-toggle="tooltip" data-bs-placement="right" title="歌手 音乐人"
+                            style="display: inline-block;">林俊杰</h5>
+                        <p class="card-text text-truncate-3" title="林俊杰" data-bs-toggle="popover"
+                            data-bs-trigger="hover"
+                            data-bs-content="林俊杰的实力是非常强的，而且这几年林俊杰的创作能力更加出类拔萃了，他的整体的歌曲的质量提升，并且歌曲都变得高级很多，不再都是谈情说爱，上升到社会层面了很多。">
+                            林俊杰的实力是非常强的，而且这几年林俊杰的创作能力更加出类拔萃了，他的整体的歌曲的质量提升，并且歌曲都变得高级很多，不再都是谈情说爱，上升到社会层面了很多。
+                        </p>
+                        <p style="margin-bottom: 0;text-align: right;">
+                            <a class="nav-link text-muted" href="#" data-bs-toggle="modal"
+                                data-bs-target="#ljj">更多>>></a>
+                        </p>
+                        <div class="modal" id="ljj">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+
+                                    <!-- 模态框头部 -->
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">林俊杰 播报 讨论99+ 上传视频</h4>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                    </div>
+
+                                    <!-- 模态框内容 -->
+                                    <div class="modal-body">
+                                        林俊杰（JJ Lin），1981年3月27日出生于新加坡，祖籍中国福建省厦门市同安区 [1] ，华语流行乐男歌手、音乐人、潮牌主理人。
+                                        2003年发行首张创作专辑《乐行者》 [2] ，并于次年凭借该专辑获得第15届台湾金曲奖最佳新人奖 [19]
+                                        。2004年凭借专辑《第二天堂》中的主打歌《江南》获得广泛关注 [3] 。2006年首次举办个人巡演“2006就是俊杰世界巡回演唱会” [26]
+                                        。2007年成立个人音乐制作公司JFJ
+                                        Productions。2008年创立潮流品牌SMG。2014年凭借专辑《因你而在》获得第25届台湾金曲奖最佳国语男歌手奖 [4]
+                                        。2016年凭借专辑《和自己对话》和歌曲《不为谁而作的歌》分别获得第27届台湾金曲奖最佳国语男歌手奖、最佳作曲人奖 [5] ，
+                                        并推出个人首部音乐纪录片《听·见林俊杰》 [6] ；同年获得国际汽车联盟（FIA）职业赛车执照 [8] 。2017年成立“SMG”电竞战队 [9]
+                                        。2019年，历时两年的“圣所”世界巡回演唱会创下动员超160万观众入场的纪录 [80] 。2023年发行创作专辑《重拾_快乐》 [340]
+                                        。截至2023年，林俊杰已发行15张正式专辑，累计创作数百首歌曲 [7] [370] 。
+                                        演艺事业外，林俊杰热心社会活动。2004年、2015年两度受邀演唱新加坡国庆庆典主题曲 [10] 。2008年担任北京奥运会火炬手 [11]
+                                        ；同年为5·12汶川地震创作并演唱歌曲《爱与希望》 [12] 。2010年担任新加坡青奥会火炬手 [13]
+                                        ；同年创作并演唱上海世博会新加坡馆主题曲《感动每一刻》 [14] 。凭借在音乐创作与慈善公益事业等方面的表现，2009年荣获新加坡杰出青年奖 [15]
+                                        ，2014年获得第5届通商中国青年奖 [16] 。
+                                    </div>
+
+                                    <!-- 模态框底部 -->
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">关闭</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="./img5-2/singer3.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title" data-bs-toggle="tooltip" data-bs-placement="right" title="歌手 词曲作者 音乐制作人"
+                            style="display: inline-block;">邓紫棋</h5>
+                        <p class="card-text text-truncate-3" title="邓紫棋" data-bs-toggle="popover"
+                            data-bs-trigger="hover"
+                            data-bs-content="邓紫棋（Gloria Tang
+                        Tsz-Kei），原名邓诗颖，1991年8月16日生于中国上海，4岁移居香港，中国香港创作型女歌手。2008年7月10日以16岁之龄出道。2016年1月5日，邓紫棋入选《福布斯》“全球30岁以下30位最具潜力杰出音乐人”。">
+                            邓紫棋（Gloria Tang
+                            Tsz-Kei），原名邓诗颖，1991年8月16日生于中国上海，4岁移居香港，中国香港创作型女歌手。2008年7月10日以16岁之龄出道。2016年1月5日，邓紫棋入选《福布斯》“全球30岁以下30位最具潜力杰出音乐人”。
+                        </p>
+                        <p style="margin-bottom: 0;text-align: right;">
+                            <a class="nav-link text-muted" href="#" data-bs-toggle="modal"
+                                data-bs-target="#dzq">更多>>></a>
+                        </p>
+                        <div class="modal" id="dzq">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+
+                                    <!-- 模态框头部 -->
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">邓紫棋 播报 讨论99+ 上传视频</h4>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                    </div>
+
+                                    <!-- 模态框内容 -->
+                                    <div class="modal-body">
+                                        邓紫棋（G.E.M.），本名邓诗颖，1991年8月16日出生于上海市，中国香港流行乐女歌手、词曲作者、音乐制作人。
+                                        2008年，发行首张录音室EP《G.E.M.》，凭该EP获得十大劲歌金曲颁奖典礼“最受欢迎女新人奖（金奖）” [1]
+                                        。2011年，成为首位登上香港体育馆开唱的90后女歌手 [3] 。2013年，凭借专辑《Xposed》入围第24届台湾金曲奖“最佳国语女歌手奖” [5]
+                                        ，并获得IFPI香港唱片销量大奖“全年最高销量女歌手奖” [4] 。2014年，获得湖南卫视歌唱真人秀节目《我是歌手第二季》总决赛亚军 [6]
+                                        ；同年，获得第27届美国儿童选择奖“最受欢迎亚洲艺人奖” [7] 。2015年，登上中央电视台春节联欢晚会弹唱歌曲《多远都要在一起》 [8]
+                                        ；同年，全亚洲发行专辑《新的心跳》并在瑞士少女峰举行公演 [49] 。
+                                        2016年，入选福布斯《全球30岁以下最具潜力音乐人榜单》 [10] ；同年，获得世界杰出华人青年大奖 [59] 和MTV欧洲音乐奖 [11]
+                                        。2017年，入选票务平台StubHub“全球十大巡演票房畅销女歌手” [68] 。2018年，成为美国航空航天局“科学突破奖”首位亚洲颁奖女艺人 [12]
+                                        ；同年，入选英国广播公司发布的《全球最具影响力百大女性榜单》 [13] 。2020年，凭借专辑《摩天动物园》获得第31届台湾金曲奖“评审团奖” [15]
+                                        ；同年，成为流媒体平台Spotify全球最多串流收听次数华语女歌手 [387] ，并获得Mnet亚洲音乐大奖“最佳亚洲艺人奖” [16]
+                                        。2021年，《光年之外》MV被吉尼斯世界纪录认证为“YouTube上观看次数最多的中文音乐视频” [425] 。2022年，发行录音室专辑《启示录》
+                                        [429] 。
+                                    </div>
+
+                                    <!-- 模态框底部 -->
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">关闭</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="./img5-2/singer4.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title" data-bs-toggle="tooltip" data-bs-placement="right" title="歌手"
+                            style="display: inline-block;">周深</h5>
+                        <p class="card-text text-truncate-3" title="周深" data-bs-toggle="popover" data-bs-trigger="hover"
+                            data-bs-content="周深2021年出的新歌比较多，这两年周深都很高产，各大内地音乐榜单上，周深也赫赫有名。音综节目周深也成为了炙手可热的争抢对象。">
+                            周深2021年出的新歌比较多，这两年周深都很高产，各大内地音乐榜单上，周深也赫赫有名。音综节目周深也成为了炙手可热的争抢对象。</p>
+                        <p style="margin-bottom: 0;text-align: right;">
+                            <a class="nav-link text-muted" href="#" data-bs-toggle="modal"
+                                data-bs-target="#zs">更多>>></a>
+                        </p>
+                        <div class="modal" id="zs">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+
+                                    <!-- 模态框头部 -->
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">周深 播报 讨论99+ 上传视频</h4>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                    </div>
+
+                                    <!-- 模态框内容 -->
+                                    <div class="modal-body">
+                                        周深（Charlie），1992年9月29日出生于湖南省邵阳市 [1] ，成长于贵州省贵阳市，中国内地男歌手，毕业于乌克兰利沃夫国立立谢科音乐科学院美声专业
+                                        [2] 。
+                                        2014年，参加浙江卫视歌唱选秀节目《中国好声音第三季》，从而正式出道。2015年，发行首支个人单曲《玫瑰与小鹿》 [3]
+                                        。2016年，获得东方风云榜最佳新人奖 [4] ；同年，为动画电影《大鱼海棠》演唱印象曲《大鱼》 [5] ，并凭借该单曲获得多个音乐奖项 [6-7]
+                                        [47-48] 。2017年，推出首张个人音乐专辑《深的深》 [8] 。2018年，发行首支个人原创单曲《可它爱着这个世界》 [9]
+                                        。2019年，参加音乐竞演节目《中国梦之声·我们的歌》，最终获得冠军 [134] ；同年，开启“C-929星球”全国巡回演唱会 [17] 。
+                                        2020年，作为首发歌手加盟《歌手·当打之年》，其演唱的《达拉崩吧》以破亿播放量斩获云村播放量第一 [416]
+                                        ；2020年起蝉联两届TMEA腾讯音乐娱乐盛典年度最佳内地男歌手奖 [379] 。2021年，首次登上央视春晚，与张也合唱《灯火里的中国》 [410]
+                                        ；同年，为联合国《生物多样性公约》缔约方大会第十五次会议（COP15）演唱主题曲《和光同春》 [343] 。2022年，加盟户外竞技真人秀《奔跑吧》担任常驻MC
+                                        [471] ；与最高人民检察院合作推出的单曲《我的答案》获中宣部第十六届精神文明建设“五个一工程”奖 [545]
+                                        。2023年，携个人单曲《花开忘忧》再度登上央视春晚舞台 [570] 。
+                                    </div>
+
+                                    <!-- 模态框底部 -->
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">关闭</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="./img5-2/singer5.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title" data-bs-toggle="tooltip" data-bs-placement="right" title="歌手 音乐制作人 影视演员"
+                            style="display: inline-block;">薛之谦</h5>
+                        <p class="card-text text-truncate-3" title="薛之谦" data-bs-toggle="popover"
+                            data-bs-trigger="hover"
+                            data-bs-content="薛之谦（JokerXue），1983年7月17日出生于上海，华语流行乐男歌手、影视演员、音乐制作人，毕业于格里昂酒店管理学院。2005年，因参加选秀节目《我型我秀》而正式出道。2006年，发行首张同名专辑《薛之谦》，随后凭借歌曲《认真的雪》获得广泛关注。2007年，凭借专辑《你过得好吗》获得MusicRadio中国TOP排行榜内地年度最受欢迎男歌手奖。">
+                            薛之谦（JokerXue），1983年7月17日出生于上海，华语流行乐男歌手、影视演员、音乐制作人，毕业于格里昂酒店管理学院。2005年，因参加选秀节目《我型我秀》而正式出道。2006年，发行首张同名专辑《薛之谦》，随后凭借歌曲《认真的雪》获得广泛关注。2007年，凭借专辑《你过得好吗》获得MusicRadio中国TOP排行榜内地年度最受欢迎男歌手奖。
+                        </p>
+                        <p style="margin-bottom: 0;text-align: right;">
+                            <a class="nav-link text-muted" href="#" data-bs-toggle="modal"
+                                data-bs-target="#xzq">更多>>></a>
+                        </p>
+                        <div class="modal" id="xzq">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+
+                                    <!-- 模态框头部 -->
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">薛之谦 播报 讨论99+ 上传视频</h4>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                    </div>
+
+                                    <!-- 模态框内容 -->
+                                    <div class="modal-body">
+                                        薛之谦（Joker Xue），1983年7月17日出生于上海市，中国内地流行乐男歌手、音乐制作人、影视演员，毕业于格里昂酒店管理学院。
+                                        2005年，因参加选秀节目《我型我秀》而正式出道 [1] 。2006年，发行首张同名专辑《薛之谦》 [169] ，随后凭借歌曲《认真的雪》获得广泛关注
+                                        [2-3]
+                                        。2007年，凭借专辑《你过得好吗》获得MusicRadio中国TOP排行榜内地年度最受欢迎男歌手奖。2008年，发行专辑《深深爱过你》，同年在上海举行个人首场演唱会“谦年传说”
+                                        [4-5] 。2013年，专辑《几个薛之谦》获得MusicRadio中国TOP排行榜内地推荐唱片 [6] ；同年，发行专辑《意外》 [170]
+                                        。2014年，获得第21届东方风云榜最佳唱作人奖 [171] ；同年他还获得音悦V榜年度盛典年度创作歌手奖 [7] 。
+                                        2015年6月，薛之谦首度担当制作人并发行原创EP《绅士》 [8] ；同年，他还主演都市励志剧《妈妈像花儿一样》 [9]
+                                        。2016年，凭借EP《绅士》、《一半》获得第16届全球华语歌曲排行榜最受欢迎男歌手、五大最受欢迎男歌手奖、上海地区杰出歌手奖及最受欢迎创作歌手奖，而歌曲《初学者》则获得年度二十大金曲奖
+                                        [10-11] 。2017年4月，开启“我好像在哪见过你”全国巡回演唱会 [12]
+                                        ；同年，薛之谦获得第7届全球流行音乐年度盛典年度最佳男歌手及MusicRadio榜中国TOP排行榜内地最佳男歌手 [13-14]
+                                        。2018年7月，薛之谦“摩天大楼”世界巡回演唱会于北京站启程，整个巡演横跨4大洲，8个国家，21个城市，累计上演场次23场 [15]
+                                        。2019年，发行专辑《尘》 [172] 。2020年，发行个人专辑《天外来物》 [16] 。2022年，发行个人音乐专辑《无数》 [202] 。
+                                    </div>
+
+                                    <!-- 模态框底部 -->
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">关闭</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="./img5-2/singer6.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title" data-bs-toggle="tooltip" data-bs-placement="right" title="歌手 影视演员"
+                            style="display: inline-block;">张韶涵</h5>
+                        <p class="card-text text-truncate-3" title="张韶涵" data-bs-toggle="popover"
+                            data-bs-trigger="hover"
+                            data-bs-content="台湾著名女歌手、演员。绰号“电眼娃娃”、“百变天后”、“排骨”。因其歌声响遏行云而蜚声乐坛。音乐专辑全亚洲总销量超过870万张,并多次提名金曲奖最佳国语女歌手和金钟奖最佳女主角。2010年上海世博会代言人之一。">
+                            台湾著名女歌手、演员。绰号“电眼娃娃”、“百变天后”、“排骨”。因其歌声响遏行云而蜚声乐坛。音乐专辑全亚洲总销量超过870万张,并多次提名金曲奖最佳国语女歌手和金钟奖最佳女主角。2010年上海世博会代言人之一。
+                        </p>
+                        <p style="margin-bottom: 0;text-align: right;">
+                            <a class="nav-link text-muted" href="#" data-bs-toggle="modal"
+                                data-bs-target="#zsh">更多>>></a>
+                        </p>
+                        <div class="modal" id="zsh">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+
+                                    <!-- 模态框头部 -->
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">张韶涵 播报 讨论99+ 上传视频</h4>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                    </div>
+
+                                    <!-- 模态框内容 -->
+                                    <div class="modal-body">
+                                        张韶涵（Angela Zhang），1982年1月19日出生于中国台湾省桃园市中坜区，拥有四分之一维吾尔族血统 [1]
+                                        ，华语流行乐女歌手、影视演员，毕业于加拿大温斯顿爵士丘吉尔中学。
+                                        2001年，出演个人首部电视剧《永不言弃》，从而正式进入演艺圈 [2-3] 。2003年，在爱情励志偶像剧《海豚湾恋人》中饰演女主角易天边 [4]
+                                        。2004年，推出首张个人音乐专辑《Over The Rainbow》 [5] 。2005年，凭借专辑《欧若拉》入围第16届台湾金曲奖最佳国语女演唱人 [6]
+                                        ；同年，出演个人首部电影《短信一月追》 [7] 。2006年，推出第3张个人音乐专辑《潘朵拉》 [8]
+                                        ；同年，凭借电视剧《爱杀17》入围第41届台湾电视金钟奖戏剧节目最佳女主角 [9] 。2007年，相继推出个人音乐专辑《梦里花》 [10] 、《Ang 5.0》
+                                        [11] ，并获得新加坡金曲奖最佳演绎女歌手奖、年度全方位艺人奖等多个奖项 [12]
+                                        。2008年，凭借电视剧《公主小妹》获得第43届台湾电视金钟奖戏剧节目女主角提名 [13] 。2009年，推出第6张个人音乐专辑《第5季》 [14] 。
+                                        2012年，推出第7张个人音乐专辑《有形的翅膀》 [15] ；同年获得第20届中国歌曲排行榜港台最受欢迎女歌手奖 [16]
+                                        。2013年，个人音乐品牌“天涵音乐”成立，并亲自担任CEO [17] 。2014年，凭借专辑《张韶涵Angela
+                                        Zhang》获得全球华语歌曲排行榜最佳全能艺人奖、年度最佳专辑制作人奖等多个奖项 [18] 。2016年，推出第9张个人音乐专辑《全面沦陷》 [19]
+                                        。2018年，作为首发阵容参加湖南卫视推出的音乐竞技节目《歌手2018》 [20] [274] 。2019年，推出第10张个人音乐专辑《？》 [21] 。
+                                    </div>
+
+                                    <!-- 模态框底部 -->
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">关闭</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h1 class="text-center text-success">精选歌单</h1>
+    <p class="text-center text-warning">歌曲下载，来我九酷音乐网！</p>
+    <div class="row">
+        <div class="col-sm-12 col-md-3 text-center">
+            <figure class="figure">
+                <img src="./img/ku-1.jpg" alt="" class="img-fluid figure-img">
+                <figcaption class="figure-caption text-center">
+                    流行歌曲
+                </figcaption>
+            </figure>
+        </div>
+        <div class="col-sm-12 col-md-3 text-center">
+            <figure class="figure">
+                <img src="./img/ku-2.jpg" alt="" class="img-fluid figure-img">
+                <figcaption class="figure-caption text-center">
+                    下载音乐库
+                </figcaption>
+            </figure>
+        </div>
+        <div class="col-sm-12 col-md-3 text-center">
+            <figure class="figure">
+                <img src="./img/ku-3.jpg" alt="" class="img-fluid figure-img">
+                <figcaption class="figure-caption text-center">
+                    车载歌曲
+                </figcaption>
+            </figure>
+        </div>
+        <div class="col-sm-12 col-md-3 text-center">
+            <figure class="figure">
+                <img src="./img/ku-4.jpg" alt="" class="img-fluid figure-img">
+                <figcaption class="figure-caption text-center">
+                    DJ舞曲
+                </figcaption>
+            </figure>
+        </div>
+    </div>
+    </div>
+    <!-- footer -->
+    <footer class="container-fluid bg-dark text-center pt-3 text-white">
+        <figure class="figure">
+            网络文化经营许可证：豫网文(2019)2932-053号
+            <p class="text-center text-white">
+                九酷网络 版权所有
+            </p>
+        </figure>
+    </footer>
+    <script>
+        // 提示框
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        });
+
+        // 弹出框
+        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+            return new bootstrap.Popover(popoverTriggerEl)
+        })
+    </script>
+</body>
+
+</html>
